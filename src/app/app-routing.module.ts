@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tareas',
     pathMatch: 'full'
+  },
+  {
+    path: 'tareas',
+    loadChildren: () => import('./tareas/tareas.module').then( m => m.TareasPageModule)
   },
 ];
 

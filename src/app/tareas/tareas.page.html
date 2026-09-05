@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title [textContent]="titulo"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+   <ion-item>
+    <ion-input label="Nueva Tarea" [(ngModel)]="nuevaTarea"></ion-input>
+
+    <ion-button (click)="guardar()">Agregar</ion-button>
+  </ion-item>
+
+ @for (tarea of tareas; track $index) {
+<ion-item>
+    {{tarea}}
+</ion-item>
+}
+</ion-content>
